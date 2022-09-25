@@ -1,8 +1,3 @@
-<%-- 
-    Document   : arithmeticcalculator
-    Created on : 18-Sep-2022, 8:28:21 PM
-    Author     : ivorl
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -14,15 +9,16 @@
     <body>
         <h1>Arithmetic Calculator</h1>
         <form method="post" action="arithmetic">
-            First: <input type="text" name="firstNumber" value="${firstValue}"><br>
-            Second: <input type="text" name="secondNumber" value="${secondValue}"><br>
-            <input type="submit" name="operationType" value="+">
-            <input type="submit" name="operationType" value="-">
-            <input type="submit" name="operationType" value="*">
-            <input type="submit" name="operationType" value="%">
+            First: <input type="number" name="firstVal" value="${firstVal}">
+            <br>
+            Last: <input type="number" name="secondVal" value="${secondVal}">
+            <br>
+            <input type="submit" value="+" name="symbols">
+            <input type="submit" value="-" name="symbols">
+            <input type="submit" value="*" name="symbols">
+            <input type="submit" value="%" name="symbols">
+            <div>${result}</div>
         </form>
-        <br>
-        <div>Result: ${calculationResult}</div>
-        <a href="age">Age Calculator</a>
+        <a href ="age"> Age Calculator</a> 
     </body>
 </html>
